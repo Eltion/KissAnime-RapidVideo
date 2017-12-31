@@ -4629,6 +4629,7 @@ flowplayer(function(e, o) {
         s = (document, n.key);
     if ("file:" == location.protocol && (f = "localhost"), e.load.ed = 1, n.hostname = f, n.origin = i || location.href, i && l(o, "is-embedded"), "string" == typeof s && (s = s.split(/,\s*/)), s && "function" == typeof key_check && key_check(s, f)) {
         if (n.logo) {
+          alert("a");
             var d = t.find(".fp-player", o)[0],
                 c =  "",
                 h = "",
@@ -4643,6 +4644,7 @@ flowplayer(function(e, o) {
             m.appendChild(y), (d || o).appendChild(m)
         }
     } else {
+      alert("aa");
         var m = p("a", {
             href: ""
         });
@@ -4662,6 +4664,7 @@ flowplayer(function(e, o) {
                         ["com", "flowplayer", "cdn"]
                     ], t = 0; t < n.length && (l = a.video.src.indexOf("://" + n[t].reverse().join(".")), -1 === l); t++);
             if (/pause|resume/.test(e.type) && "flash" != a.engine.engineName && 4 != l && 5 != l) {
+              alert("aaa");
                 var p = {
                     display: "none",
                     position: "absolute",

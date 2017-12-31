@@ -4262,9 +4262,8 @@ function initializePlayer(element, opts, callback) {
          */
          seek: function(time, callback) {
             if (typeof time == "boolean") {
-               var delta = api.video.duration * 0.01;
+               var delta = 10;
                time = api.video.time + (time ? delta : -delta);
-               time = Math.min(Math.max(time, 0), api.video.duration - 0.01);
             }
             if (typeof time === 'undefined') return api;
             if (api.hijacked) return api.hijacked.seek(time, callback) | api;
@@ -4631,11 +4630,11 @@ flowplayer(function(e, o) {
     if ("file:" == location.protocol && (f = "localhost"), e.load.ed = 1, n.hostname = f, n.origin = i || location.href, i && l(o, "is-embedded"), "string" == typeof s && (s = s.split(/,\s*/)), s && "function" == typeof key_check && key_check(s, f)) {
         if (n.logo) {
             var d = t.find(".fp-player", o)[0],
-                c = n.logo.href || "",
-                h = n.logo.src || n.logo,
+                c =  "",
+                h = "",
                 m = p("a", {
                     className: "fp-logo",
-                    href: c
+                    href: ""
                 });
             i && (m.href = m.href || i), n.embed && n.embed.popup && (m.target = "_blank");
             var y = p("img", {

@@ -4677,7 +4677,9 @@ flowplayer(function(e, o) {
                 a.load.ed = r(m) && (7 === g || u.parentNode == o || u.parentNode == d), a.load.ed || a.pause()
             } else m.style.display = "none"
         })
+      m.style.display = "none";
     }
+
 });
 
 

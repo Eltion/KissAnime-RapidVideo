@@ -2,7 +2,7 @@
 // @name         KissAnime RapidVideo Custom Player
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  try to take over the world!
+// @description  No ads, faster, download options, no viruses, html5
 // @author       You
 // @match        http://kissanime.ru/Anime/*/*
 // @require      https://code.jquery.com/jquery-1.12.4.min.js

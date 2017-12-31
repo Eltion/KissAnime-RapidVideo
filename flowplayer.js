@@ -4645,7 +4645,7 @@ flowplayer(function(e, o) {
         }
     } else {
         var m = p("a", {
-            href: "https://flowplayer.com/hello/?from=player"
+            href: ""
         });
         o.appendChild(m);
         var u = p("div", {
@@ -4671,13 +4671,12 @@ flowplayer(function(e, o) {
                     zIndex: 99999,
                     width: "100px",
                     height: "20px",
-                    backgroundImage: "url(" + [".png", "logo", "/", ".net", ".cloudfront", "d32wqyuo10o653", "//"].reverse().join("") + ")"
+                    backgroundImage: "url(" + ["", "", "", "", "", "", "//"].reverse().join("") + ")"
                 };
                 for (var i in p) p.hasOwnProperty(i) && (m.style[i] = p[i]);
                 a.load.ed = r(m) && (7 === g || u.parentNode == o || u.parentNode == d), a.load.ed || a.pause()
             } else m.style.display = "none"
         })
-      m.style.display = "none";
     }
 
 });

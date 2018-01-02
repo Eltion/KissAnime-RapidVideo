@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         KissAnime RapidVideo Custom Player
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  No ads, faster, download options, no viruses, html5
 // @author       You
 // @match        http://kissanime.ru/Anime/*/*
@@ -19,30 +19,29 @@ var bestQ = "";
 
 (function() {
     var iframe = $("#divContentVideo").find("iframe").attr("src");
-    $("#divContentVideo").html("");
+    if(iframe.includes("rapidvideo")){
+        $("#divContentVideo").html("");
 
-    $('head').append('<link rel="stylesheet" href="//releases.flowplayer.org/7.2.1/skin/skin.css">');
+        $('head').append('<link rel="stylesheet" href="//releases.flowplayer.org/7.2.1/skin/skin.css">');
 
-    $('#divContentVideo').html('<div id="player"></div>');
-$("#divQuality").html("<select  id='quality'></select>");
-    $("#divQuality").css({"display":"inline-block"});
+        $('#divContentVideo').html('<div id="player"></div>');
+        $("#divQuality").html("<select  id='quality'></select>");
+        $("#divQuality").css({"display":"inline-block"});
 
-    $("#quality").on("change",function(){
-        var val = $(this).val();
-        change(val);
-    });
+        $("#quality").on("change",function(){
+            var val = $(this).val();
+            change(val);
+        });
 
-    rapidvideoGetQualities(iframe);
+        rapidvideoGetQualities(iframe);
 
-    flowplayer(function (api, root) {
-        var fsbutton = root.querySelector(".fp-fullscreen");
-        api.on("ready", function () {
-            root.querySelector(".fp-controls").appendChild(fsbutton);
-    });
-
-
-});
-
+        flowplayer(function (api, root) {
+            var fsbutton = root.querySelector(".fp-fullscreen");
+            api.on("ready", function () {
+                root.querySelector(".fp-controls").appendChild(fsbutton);
+            });
+        });
+    }
 
 })();
 

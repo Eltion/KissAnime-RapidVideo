@@ -10332,3 +10332,26 @@ module.exports = Array.isArray || function (arr) {
 
 },{}]},{},[32])(32)
 });
+
+var bean = flowplayer.bean; // Flowplayer internal DOM event manager
+flowplayer(function(api, root) {
+   bean.off(root, 'click.player'); // Disbable internal click toggle
+
+   var clickHandlers = [];
+
+   bean.on(root, 'click', function() {
+      clickHandlers.push(setTimeout(function() { // Wait 2200ms to see if it was a double click
+         api.toggle(); // Toggle playback
+      }, 220));
+   });
+
+   bean.on(root, 'dblclick', function() {
+      api.fullscreen(); // Toggle fullscreen
+
+      clickHandlers.forEach(function(handler) {
+         // Do not allow running click handlers
+         clearTimeout(handler);
+      });
+      clickHandlers = []; // Reset
+   });
+});

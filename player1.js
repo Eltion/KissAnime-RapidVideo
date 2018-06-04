@@ -4650,7 +4650,7 @@ flowplayer(function(e, o) {
         o.appendChild(m);
         var u = p("div", {
                 className: "fp-context-menu fp-menu"
-            }, '<strong>AnimeBro1</strong><a id="Download" download target="_blank" href="">Download</a><a target="_blank" href="https://greasyfork.org/en/users/135934-anime-bro1">Other Scripts</a>'),
+            }, '<strong>AnimeBro</strong><a id="Download" download target="_blank" href="">Download</a><a target="_blank" href="https://github.com/Eltion">More Scripts</a>'),
             g = window.location.href.indexOf("localhost"),
             d = t.find(".fp-player", o)[0];
         7 !== g && (d || o).appendChild(u), e.on("pause resume finish unload ready", function(e, a) {

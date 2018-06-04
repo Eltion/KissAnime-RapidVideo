@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         KissAnime RapidVideo Custom Player
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  No ads, faster, download options, no viruses, html5
 // @author       You
 // @match        http://kissanime.ru/Anime/*/*

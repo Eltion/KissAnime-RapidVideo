@@ -6,7 +6,7 @@
 // @author       You
 // @match        http://kissanime.ru/Anime/*/*
 // @require      https://code.jquery.com/jquery-1.12.4.min.js
-// @require     https://cdn.rawgit.com/Eltion/KissAnime-RapidVideo/112df41f394b4ca5924d9d4e11b77cf6cf7bda93/player1.js
+// @require     https://cdn.jsdelivr.net/gh/Eltion/KissAnime-RapidVideo@112df41f394b4ca5924d9d4e11b77cf6cf7bda93/player1.js
 
 // @grant        GM_xmlhttpRequest
 // ==/UserScript==
